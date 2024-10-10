@@ -1,0 +1,426 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+.logo {
+    padding-left: 20px;
+}
+
+.services {
+    padding-left: 20px;
+}
+
+.products {
+    padding-left: 20px;
+}
+
+.testimonials {
+    padding-left: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    transition: background 0.5s;
+    padding-right: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar nav ul.active {
+        display: flex;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.section {
+    padding: 100px 0;
+}
+
+.about {
+    padding-top: 100px;
+}
+
+.about .container {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 30%;
+}
+
+.about-card i {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Section */
+
+.services {
+    padding-top: 100px;
+}
+
+.services .container {
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 30%;
+}
+
+.service-card i {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f0f4f8;
+    padding: 200px 0;
+    padding-top: 100px;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 30%;
+}
+
+.contact-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Products Section */
+.products {
+    background-color: #f0f4f8;
+    padding: 60px 0;
+    padding-top: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.products .container {
+    text-align: center;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 30%;
+}
+
+.product-card img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsiveness for Products and Portofolio */
+@media (max-width: 768px) {
+    .product-cards, .portofolio-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card, .portofolio-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0; /* Tambah padding untuk memberi ruang lebih */
+    text-align: center;
+    width: 100%;
+}
+  
+.footer-address, .footer-contact, .footer-socmed {
+    flex: 1; /* Memberikan ruang yang sama untuk setiap bagian */
+    text-align: center;
+}
+
+.footer .container {
+    display:flex ;
+    align-items: center; /* Menyusun konten di tengah secara horizontal */
+    max-width: 1200px;
+    margin: 0 auto; /* Menjadikan konten footer berada di tengah */
+    justify-content: space-between;
+    row-gap: 100px;
+    
+}
+
+.footer .footer-address, .footer .footer-contact, .footer .footer-socmed {
+    margin-bottom: 20px; /* Menambah jarak antar bagian footer */
+    flex: 1; /* Memberikan ruang yang sama untuk setiap bagian */
+    text-align: center;
+}
+
+.footer .footer-socmed ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Jarak antar ikon sosial media */
+    justify-content: center; /* Posisi ikon berada di tengah */
+}
+
+.footer .footer-socmed ul li a {
+    color: #fff;
+    font-size: 1.5em; /* Ukuran ikon sosial media lebih besar */
+    transition: color 0.3s ease;
+}
+
+.footer .footer-socmed ul li a:hover {
+    color: #ffeb3b; /* Warna ikon berubah saat di-hover */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Jarak atas bawah footer */
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/* Responsive Design untuk Footer */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column; /* Ubah menjadi kolom pada layar kecil */
+        align-items: center; /* Pusatkan semua item */
+        text-align: center; /* Pusatkan teks */
+    }
+}
+
+ /* Smooth scrolling */
+ html {
+    scroll-behavior: smooth;
+}   
